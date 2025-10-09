@@ -51,3 +51,18 @@ async def on_interaction(interaction: discord.Interaction):
 
 # Ejecutar bot usando token seguro desde variables de entorno
 bot.run(os.getenv("DISCORD_TOKEN"))
+
+from threading import Thread
+from flask import Flask
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Bot activo 🚀"
+
+def run():
+    app.run(host='0.0.0.0', port=8080)
+
+# Inicia el servidor web en un hilo separado
+Thread(target=run).start()

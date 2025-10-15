@@ -1,4 +1,2 @@
-discord.py
-requests
-phyton-dotenv
-flask
+discord.py==2.4.0
+request==2.32.3

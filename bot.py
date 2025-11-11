@@ -130,4 +130,9 @@ def enviar_a_appsheet(data):
     except Exception as e:
         print("❌ Error enviando a AppSheet:", e)
 
-bot.run(DISCORD_TOKEN)
+import os
+
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+
+if _name_ == "_main_":
+    bot.run(DISCORD_TOKEN)

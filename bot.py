@@ -134,5 +134,5 @@ import os
 
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
-if _name_ == "_main_":
+if _name_ == "__main__":
     bot.run(DISCORD_TOKEN)

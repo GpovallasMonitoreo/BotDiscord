@@ -134,8 +134,7 @@ import os
 
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
-if __name__ == "__main__":
-    bot.run(DISCORD_TOKEN)
+#LO ACABO DE AGREGAR COMO BLOQUE PARA SOLUCIONAR (12:20, 11 NOV)
 
 # --- Mantener vivo el bot en Render con Flask ---
 from flask import Flask
@@ -153,3 +152,14 @@ def run_flask():
 
 # Ejecutar Flask en un hilo paralelo
 threading.Thread(target=run_flask).start()
+
+
+# AQUI TERMINA
+
+
+
+
+if __name__ == "__main__":
+    bot.run(DISCORD_TOKEN)
+
+

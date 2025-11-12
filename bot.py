@@ -136,3 +136,20 @@ DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
 if __name__ == "__main__":
     bot.run(DISCORD_TOKEN)
+
+# --- Mantener vivo el bot en Render con Flask ---
+from flask import Flask
+import threading
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot de Discord corriendo correctamente ✅"
+
+def run_flask():
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
+# Ejecutar Flask en un hilo paralelo
+threading.Thread(target=run_flask).start()
